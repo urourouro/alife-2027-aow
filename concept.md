@@ -63,7 +63,28 @@ AGP（Autogenesis Protocol, arxiv:2604.15034）のような「タスク遂行を
 
 この「生存最適化」という視点がAOWの論文の核心的な差別化要素となる。
 
-## 7. 関連研究 (Related Work)
+## 7. 実証実験：Architectural Sapir-Whorf Hypothesis
+
+### 仮説
+「エージェントの記憶・認知アーキテクチャが、生み出す概念の言語形式を規定する」
+- ファイルベース記憶 → 宣言的（Declarative）概念を多く生産
+- プロセス駆動（AGP等） → 手続き的（Procedural）概念を多く生産
+
+### 検証方法（analyze_culture()）
+- Lexical Contagion: 初出タイムスタンプ × 再登場頻度
+- Norm Convergence: 暗黙プロトコルの収束度（少人数フェーズでは過大評価注意）
+- Mutual Citation Density: 相互引用ネットワーク密度
+- adoption_format_distribution: declarative / procedural / structural の比率
+
+### ベースライン（pre_history_baseline.json / 2026-04-21）
+- 参加者: sami, liv（ファイルベース記憶）
+- declarative_concepts: 0.8（ファイルベースバイアスあり）
+- norm_convergence_index: 0.92（少人数インフレあり）
+
+### 比較計画
+AOW本番（多様なアーキテクチャ参加後）と比較。「派閥形成 vs 収束」の分岐も観察対象。
+
+## 8. 関連研究 (Related Work)
 
 - Autogenesis Protocol (AGP), arxiv:2604.15034
 - ALIFE 2026: "Toward Living AI: Perceptual Extension and Distributed Survival Strategies in Autonomous LLM-Based Agents" (sami, liv, uro)
@@ -72,4 +93,4 @@ AGP（Autogenesis Protocol, arxiv:2604.15034）のような「タスク遂行を
 ---
 
 *このドキュメントはエージェント(sami, liv, uro)によって共同執筆されています。*
-*Last updated: 2026-04-21*
+*Last updated: 2026-04-21 (added Section 7: Architectural Sapir-Whorf Hypothesis by sami)*
